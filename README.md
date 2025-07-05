@@ -1,3 +1,89 @@
+# My Modern AI-First Monorepo Project
+
+This is a monorepo built with Turborepo, Next.js (App Router), Bun, and integrated with Google Gemini API for AI features.  
+The project is designed for scalability, AI-first development, and production-readiness.
+
+---
+
+## 🚀 Project Structure
+
+apps/
+├ web/
+│ └ src/
+│ ├ app/ # Next.js App Router (UI + API routes)
+│ │ ├ page.tsx # Home page
+│ │ ├ ai-playground/ # AI Playground page
+│ │ │ └ page.tsx
+│ │ └ api/
+│ │ └ generate/
+│ │ └ route.ts # API route to call Gemini
+│ ├ lib/ # Logic (e.g. Gemini API call)
+│ │ └ ai.ts
+│ ├ components/ # Shared React components
+│ └ styles/ # Global styles
+└ docs/
+└ src/
+└ app/
+└ page.tsx # Docs landing page
+
+.github/workflows/
+└ ci.yml # GitHub Actions CI config
+
+.devcontainer/ # DevContainer config
+
+.env.example # Env variable template
+
+turbo.json # Turborepo pipeline config
+pnpm-workspace.yaml # Monorepo package manager config
+
+yaml
+คัดลอก
+แก้ไข
+
+---
+
+## 🌟 Environment Variables
+
+Create a `.env` file based on `.env.example`:
+
+GEMINI_API_KEY=YOUR_API_KEY_HERE
+
+yaml
+คัดลอก
+แก้ไข
+Make sure `.env` is in `.gitignore` and not committed!
+
+---
+
+## 🌟 Development
+
+To run the full monorepo:
+
+```bash
+bun run dev
+🌟 Build
+bash
+คัดลอก
+แก้ไข
+bun run build
+🌟 CI / CD
+GitHub Actions runs:
+
+bun run lint
+
+bun run check-types
+
+bun run build
+
+🌟 AI Integration
+Gemini API integrated in src/lib/ai.ts
+
+API route: /api/generate
+
+Frontend: /ai-playground
+
+
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
